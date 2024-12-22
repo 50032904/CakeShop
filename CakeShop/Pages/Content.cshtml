@@ -1,0 +1,16 @@
+﻿@page "/Content/{id}"
+@model ContentModel
+@{
+}
+<div class="container text-center">
+    <div class="align-content-center">
+        <h1>@Html.DisplayFor(model => model.Item[@Model.Id].Title)</h1>
+        <br />
+        <img src="/images/@Html.DisplayFor(model => model.Item[@Model.Id].ImageDirectory)" class="col-12 col-md-6" alt="Image of @Model.Item[@Model.Id].Title" />
+        <br />
+        <br />
+        <div class="" style="overflow-wrap: break-word">
+        @Html.DisplayFor(model => model.Item[@Model.Id].Description)
+        </div>
+    </div>
+</div>
